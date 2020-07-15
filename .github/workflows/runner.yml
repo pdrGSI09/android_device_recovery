@@ -1,22 +1,11 @@
 name: Recovery Building
 
-on:
-#  release:
-#    types: [published]
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - '.config'
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
-    types: [started]
+on: [push]
 
 env:
   ALLOW_MISSING_DEPENDENCIES: true
   LC_ALL: C
-  DEVICE: montana
+  DEVICE: montana-Pterodon
 
 jobs:
   build:
@@ -34,6 +23,7 @@ jobs:
               sudo install telegram /usr/bin
               chmod +x $DEVICE/initial.sh
               . $DEVICE/initial.sh
+              
        - name: Execute Shell Script
          env:
               TOKEN: ${{ secrets.TOKEN }}
