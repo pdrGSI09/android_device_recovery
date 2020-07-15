@@ -11,7 +11,7 @@ sudo chmod a+rx /usr/local/bin/repo
 
 repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
-git clone https://github.com/YuMi-Project/android_device_samsung_j7xelte.git -b fox-9.0 device/samsung/j7xelte
+git clone https://gitlab.com/android_samsung_universal7870/manifest/android_manifest_samsung_j7xelte.git -b orangefox .repo/local_manifests
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
