@@ -5,7 +5,7 @@ on: [push]
 env:
   ALLOW_MISSING_DEPENDENCIES: true
   LC_ALL: C
-  DEVICE: montana-Pterodon
+  DEVICE: j7xelte-twrp
 
 jobs:
   build:
