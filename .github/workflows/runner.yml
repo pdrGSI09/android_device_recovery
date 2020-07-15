@@ -29,6 +29,5 @@ jobs:
               TOKEN: ${{ secrets.TOKEN }}
 
          run: |
-               setopt shwordsplit
                chmod +x $DEVICE/build.sh
                . $DEVICE/build.sh
