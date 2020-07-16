@@ -1,7 +1,7 @@
 #!/bin/bash
 # Sync
-telegram -M "TWRP - Moto X4: Sync & Building Test"
-telegram -M "TWRP - Moto X4: Sync started"
+telegram -M "SHRP - Moto X4: Sync & Building Test"
+telegram -M "SHRP - Moto X4: Sync started"
 SYNC_START=$(date +"%s")
 
 sudo -E apt-get -qq update
@@ -12,8 +12,9 @@ sudo chmod a+rx /usr/local/bin/repo
 
 repo init --depth=1 -u git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b android-9.0
 repo sync
-mkdir device; cd device; mkdir motorola; cd motorola; git clone https://github.com/YuMi-Project/android_device_motorola_payton -b android-9.0-shrp payton
+cd device; mkdir motorola; cd motorola; git clone https://github.com/YuMi-Project/android_device_motorola_payton -b android-9.0-shrp payton
+cd ../../
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
-telegram -M "TWRP - Moto X4: Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
+telegram -M "SHRP - Moto X4: Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
