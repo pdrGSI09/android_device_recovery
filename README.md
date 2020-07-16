@@ -4,9 +4,9 @@
 
 Device   | Supported
 -------:|:-------------------------
-Motorola Moto G5S     | Yes
-Motorola Moto X4     | Yes
-Samsung Galaxy A20s     | Yes
+Motorola Moto G5S     | Yes (TWRP Ok, Pterodon Black screen)
+Motorola Moto X4     | Yes (SHRP, Pterodon & TWRP Broken)
+Samsung Galaxy A20s     | Yes (SHRP & TWRP Bootloader, OrangeFox need test)
 Samsung Galaxy J7 (j7xelte)     | Testing yet
 
 ### Credits and thanks and stuff like that ###

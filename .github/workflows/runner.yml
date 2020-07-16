@@ -5,7 +5,7 @@ on: [push]
 env:
   ALLOW_MISSING_DEPENDENCIES: true
   LC_ALL: C
-  DEVICE: payton-shrp
+  DEVICE: a207M-shrp
 
 jobs:
   build:
