@@ -5,7 +5,7 @@ on: [push]
 env:
   ALLOW_MISSING_DEPENDENCIES: true
   LC_ALL: C
-  DEVICE: j7xelte-fox-9.0
+  DEVICE: payton-shrp
 
 jobs:
   build:
