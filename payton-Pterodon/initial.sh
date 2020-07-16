@@ -1,6 +1,6 @@
 #!/bin/bash
 # Sync
-telegram -M "TWRP - Moto X4: Sync started"
+telegram -M "Pterodon - Moto X4: Sync started"
 SYNC_START=$(date +"%s")
 
 sudo -E apt-get -qq update
@@ -9,11 +9,10 @@ sudo apt-get install default-jdk android-tools-adb bison build-essential curl fl
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 sudo chmod a+rx /usr/local/bin/repo
 
-repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
+repo init --depth=1 -u git://github.com/PterodonRecovery/manifest.git -b master
 repo sync
-git clone https://github.com/YuMi-Project/android_device_motorola_payton -b android-9.0 payton
-cd ../../../
+git clone https://github.com/YuMi-Project/android_device_motorola_payton -b android-9.0 device/motorola/payton
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
-telegram -M "TWRP - Moto X4: Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
+telegram -M "Pterodon - Moto X4: Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"

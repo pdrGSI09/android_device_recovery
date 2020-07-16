@@ -15,4 +15,4 @@ telegram -M "TWRP - Moto X4: Building completed successfully in $((SYNC_DIFF / 6
 
 # Output
 ls out/target/product/payton/
-telegram -f out/target/product/payton/recovery.img "[SHRP Recovery] [Unofficial] - Moto X4"
+telegram -f out/target/product/payton/recovery.img "[TWRP Recovery] [Unofficial] - Moto X4"
