@@ -12,6 +12,9 @@ telegram -M "TWRP - Moto G5S: Device Tree Sync (Dependencies) completed successf
 # Build
 telegram -m "TWRP - Moto G5S: Building Recovery started"
 SYNC_START=$(date +"%s")
+
+export ALLOW_MISSING_DEPENDENCIES=true
+export LC_ALL=C
 mka recoveryimage
 
 SYNC_END=$(date +"%s")

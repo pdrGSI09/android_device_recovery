@@ -3,6 +3,9 @@
 # Build
 telegram -m "OrangeFox 9.0 (R10.1) - J7 (j7xelte): Building Recovery started"
 SYNC_START=$(date +"%s")
+
+export ALLOW_MISSING_DEPENDENCIES=true
+export LC_ALL=C
 . build_ofox.sh j7xelte
 
 SYNC_END=$(date +"%s")

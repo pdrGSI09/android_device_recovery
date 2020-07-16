@@ -3,6 +3,9 @@
 # Build
 telegram -m "TWRP - J7 (j7xelte): Building Recovery started"
 SYNC_START=$(date +"%s")
+
+export ALLOW_MISSING_DEPENDENCIES=true
+export LC_ALL=C
 . build_twrp.sh j7xelte
 
 SYNC_END=$(date +"%s")

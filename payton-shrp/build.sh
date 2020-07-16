@@ -5,6 +5,8 @@
 telegram -M "SHRP - Moto X4: Building Recovery started"
 SYNC_START=$(date +"%s")
 
+export ALLOW_MISSING_DEPENDENCIES=true
+export LC_ALL=C
 . build/envsetup.sh
 lunch omni_payton-eng
 mka recoveryimage

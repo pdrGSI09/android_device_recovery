@@ -1,5 +1,6 @@
 #!/bin/bash
 # Sync
+telegram -M "Pterodon: The source are broken (If you have fix, share in @yumigsis2"
 telegram -M "Pterodon - Moto G5S: Sync Device (Dependencies) Tree started"
 SYNC_START=$(date +"%s")
 
@@ -12,6 +13,9 @@ telegram -M "Pterodon - Moto G5S: Device Tree Sync (Dependencies) completed succ
 # Build
 telegram -m "Pterodon - Moto G5S: Building Recovery started"
 SYNC_START=$(date +"%s")
+
+export ALLOW_MISSING_DEPENDENCIES=true
+export LC_ALL=C
 mka recoveryimage
 
 SYNC_END=$(date +"%s")

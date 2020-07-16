@@ -3,9 +3,7 @@ name: Recovery Building
 on: [push]
 
 env:
-  ALLOW_MISSING_DEPENDENCIES: true
-  LC_ALL: C
-  DEVICE: griffin-Pterodon
+  DEVICE: griffin-shrp
 
 jobs:
   build:
