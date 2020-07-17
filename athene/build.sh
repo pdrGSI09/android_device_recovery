@@ -4,7 +4,7 @@ telegram -M "TWRP - Moto G4 Plus: Sync Device (Dependencies) Tree started"
 SYNC_START=$(date +"%s")
 
 . build/envsetup.sh
-lunch omni_montana-eng
+lunch omni_athene-eng
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
 telegram -M "TWRP - Moto G4 Plus: Device Tree Sync (Dependencies) completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
