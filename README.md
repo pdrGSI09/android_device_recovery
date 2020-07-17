@@ -6,10 +6,11 @@ Device   | Supported
 -------:|:-------------------------
 Motorola Moto G5S     | Yes (TWRP Ok)
 Motorola Moto G5     | No yet
+Motorola Moto G4 Plus      | Testing yet
 Motorola Moto X4     | Yes (SHRP & TWRP Broken)
 Motorola Moto Z     | Yes (TWRP Ok, SHRP Testing)
 Samsung Galaxy A20s     | Yes (SHRP & TWRP Bootloader, OrangeFox need test)
-Samsung Galaxy J7 (j7xelte)     | Testing yet
+Samsung Galaxy J7 (j7xelte)     | Yes (Need to fix issues)
 
 - Others: Don't use Pterodon sources, are broken (Recovery issue, wait for fix)
 
