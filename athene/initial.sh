@@ -11,7 +11,7 @@ sudo chmod a+rx /usr/local/bin/repo
 
 repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-7.1
 repo sync
-git clone https://github.com/YuMi-Project/android_device_motorola_athene device/motorola/athene
+git clone https://github.com/YuMi-Project/android_device_motorola_athene -b twrp device/motorola/athene
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
