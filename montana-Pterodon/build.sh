@@ -1,6 +1,5 @@
 #!/bin/bash
-# Sync
-telegram -M "Pterodon: The source are broken (If you have fix, share in @yumigsis2"
+#Sync
 telegram -M "Pterodon - Moto G5S: Sync Device (Dependencies) Tree started"
 SYNC_START=$(date +"%s")
 
