@@ -11,7 +11,7 @@ sudo chmod a+rx /usr/local/bin/repo
 
 repo init --depth=1 -u git://github.com/PterodonRecovery/manifest.git -b master
 repo sync
-git clone https://github.com/yukosky/android_device_motorola_montana device/motorola/montana
+git clone https://github.com/yukosky/android_device_motorola_montana -android-9.0-pterodon device/motorola/montana
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
