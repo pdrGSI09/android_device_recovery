@@ -5,6 +5,7 @@ SYNC_START=$(date +"%s")
 
 . build/envsetup.sh
 lunch omni_montana-eng
+rm -rf device/qcom/common/*
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
 telegram -M "Pterodon - Moto G5S: Device Tree Sync (Dependencies) completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
