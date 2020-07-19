@@ -11,7 +11,7 @@ sudo chmod a+rx /usr/local/bin/repo
 
 repo init --depth=1 -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-6.0
 repo sync
-git clone https://github.com/yukosky/android_device_motorola_montana device/motorola/montana
+git clone https://github.com/yukosky/android_device_motorola_montana -b android-7.1-pbrp device/motorola/montana
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
