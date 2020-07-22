@@ -3,8 +3,7 @@ name: Recovery Building
 on: [push]
 
 env:
-  DEVICE: montana-RW
-
+  DEVICE: a207M
 jobs:
   build:
     runs-on: ubuntu-latest
