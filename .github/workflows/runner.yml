@@ -3,7 +3,7 @@ name: Recovery Building
 on: [push]
 
 env:
-  DEVICE: a207M
+  DEVICE: montana-Pterodon
 jobs:
   build:
     runs-on: ubuntu-latest
