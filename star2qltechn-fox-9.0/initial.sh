@@ -1,6 +1,6 @@
 #!/bin/bash
 # Sync
-telegram -M "Red Wolf - Moto G5S: Sync started"
+telegram -M "OrangeFox 9.0 (R10.1) - S9+ (star2qltechn): Sync started"
 SYNC_START=$(date +"%s")
 
 sudo -E apt-get -qq update
@@ -9,10 +9,13 @@ sudo apt-get install default-jdk android-tools-adb bison build-essential curl fl
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 sudo chmod a+rx /usr/local/bin/repo
 
-repo init --depth=1 -u git://github.com/RedWolfRecovery/rw_manifest.git -b rw-n
-repo sync
-git clone https://github.com/yukosky/android_device_motorola_montana device/motorola/montana
+repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_8.1
+git clone https://github.com/klabit87/twrp_android_device_samsung_star2qltechn/tree/android-8.1 -b orangefox .repo/local_manifests
+repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
-telegram -M "Red Wolf - Moto G5S: Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
+telegram -M "OrangeFox 9.0 (R10.1) - S9+ (star2qltechn): Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
+
+# Others
+mv device/samsung/star2qltechn/build_ofox.sh .
