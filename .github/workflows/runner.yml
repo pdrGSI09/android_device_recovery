@@ -3,7 +3,7 @@ name: Recovery Building
 on: [push]
 
 env:
-  DEVICE: montana-Pterodon
+  DEVICE: star2qltechn-fox-9.0
   
 jobs:
   build:
