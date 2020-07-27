@@ -20,4 +20,5 @@ telegram -M "OrangeFox 9.0 (R11) - S9+ (star2qltechn): Sync completed successful
 
 # Others
 mv build_ofox.sh ../.
+cd ../
 chmod +x build_ofox.sh
