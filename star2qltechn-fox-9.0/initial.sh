@@ -1,6 +1,6 @@
 #!/bin/bash
 # Sync
-telegram -M "OrangeFox 9.0 (R10.1) - S9+ (star2qltechn): Sync started"
+telegram -M "OrangeFox 9.0 (R11) - S9+ (star2qltechn): Sync started"
 SYNC_START=$(date +"%s")
 
 sudo -E apt-get -qq update
@@ -15,7 +15,7 @@ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimiz
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
-telegram -M "OrangeFox 9.0 (R10.1) - S9+ (star2qltechn): Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
+telegram -M "OrangeFox 9.0 (R11) - S9+ (star2qltechn): Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
 
 # Others
 mv device/samsung/star2qltechn/build_ofox.sh .
