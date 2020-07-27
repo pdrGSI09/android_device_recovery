@@ -9,9 +9,11 @@ sudo apt-get install default-jdk android-tools-adb bison build-essential curl fl
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 sudo chmod a+rx /usr/local/bin/repo
 
-repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git
+repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 git clone https://github.com/klabit87/twrp_android_device_samsung_star2qltechn.git -b 9.0 .repo/local_manifests
 repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
+mkdir -p device/samsung/; cd device/samsung
+git clone https://github.com/klabit87/twrp_android_device_samsung_star2qltechn.git -b 9.0 star2qltechn; cd ../
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
