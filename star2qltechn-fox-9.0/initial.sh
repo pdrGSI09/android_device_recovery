@@ -19,6 +19,5 @@ SYNC_DIFF=$((SYNC_END - SYNC_START))
 telegram -M "OrangeFox 9.0 (R11) - S9+ (star2qltechn): Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
 
 # Others
-mv build_ofox.sh ../.
 cd ../
 chmod +x build_ofox.sh
