@@ -10,7 +10,7 @@ sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleap
 sudo chmod a+rx /usr/local/bin/repo
 
 repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_8.1
-git clone https://github.com/klabit87/twrp_android_device_samsung_star2qltechn/tree/android-8.1 -b orangefox .repo/local_manifests
+git clone https://github.com/klabit87/twrp_android_device_samsung_star2qltechn.git -b 8.1 .repo/local_manifests
 repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
 
 SYNC_END=$(date +"%s")
